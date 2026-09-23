@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #21176f;
+    background: #ffffff;
+    border-top: 3px solid #3d3d3d;
+}
+
+/* Main section */
+.team-section {
+    min-height: 100vh;
+    padding: 50px 20px 30px;
+}
+
+/* Main content */
+.container {
+    width: min(100%, 1170px);
+    margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    color: #21176f;
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.hero p {
+    max-width: 950px;
+    margin: 28px auto 0;
+    color: #a2a3b3;
+    font-size: clamp(1.05rem, 1.7vw, 1.45rem);
+    line-height: 1.55;
+    font-weight: 500;
+}
+
+/* Button */
+.team-button {
+    display: inline-block;
+    margin-top: 55px;
+    padding: 14px 36px;
+
+    border: 2px solid #e9e8ed;
+    border-radius: 50px;
+
+    background: #ffffff;
+    color: #21176f;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.team-button:hover {
+    border-color: #21176f;
+    transform: translateY(-2px);
+}
+
+/* Team cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 82px;
+}
+
+/* Card */
+.team-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 2px solid #e9e8ed;
+    border-radius: 11px;
+
+    background: #ffffff;
+}
+
+/* Member area */
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px 45px;
+
+    text-align: center;
+}
+
+/* Profile image */
+.member img {
+    display: block;
+
+    width: 120px;
+    height: 120px;
+    max-width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+}
+
+/* Name */
+.member h2 {
+    margin-top: 32px;
+
+    color: #21176f;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Role */
+.role {
+    margin-top: 23px;
+
+    color: #a2a3b3;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+/* Social media area */
+.socials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 2px solid #e9e8ed;
+}
+
+/* Social icons */
+.socials a {
+    display: grid;
+    place-items: center;
+
+    min-height: 62px;
+
+    color: #a2a3b3;
+
+    font-size: 1.2rem;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.socials a + a {
+    border-left: 2px solid #e9e8ed;
+}
+
+.socials a:hover {
+    color: #21176f;
+    background: #fafafe;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 950px) {
+
+    .container {
+        width: min(100%, 760px);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        margin-top: 65px;
+    }
+
+    .team-card:last-child {
+        grid-column: 1 / -1;
+        width: min(100%, 370px);
+        justify-self: center;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 620px) {
+
+    .team-section {
+        padding: 38px 16px 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+    }
+
+    .hero p {
+        margin-top: 20px;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .team-button {
+        margin-top: 35px;
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 50px;
+    }
+
+    .team-card:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .member {
+        padding: 42px 20px 38px;
+    }
+
+    .member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .member h2 {
+        margin-top: 27px;
+        font-size: 1.4rem;
+    }
+
+    .role {
+        margin-top: 19px;
+        font-size: 0.85rem;
+        letter-spacing: 2.3px;
+    }
+
+    .socials a {
+        min-height: 58px;
+    }
+}
